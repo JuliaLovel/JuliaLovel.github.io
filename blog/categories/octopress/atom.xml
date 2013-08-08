@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Codez Galore]]></title>
   <link href="http://JuliaLovel.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://JuliaLovel.github.io/"/>
-  <updated>2013-08-08T16:30:00-05:00</updated>
+  <updated>2013-08-08T17:46:48-05:00</updated>
   <id>http://JuliaLovel.github.io/</id>
   <author>
     <name><![CDATA[Julia Lovel]]></name>
@@ -18,7 +18,27 @@
     <link href="http://JuliaLovel.github.io/blog/2013/08/08/using-octopress-to-make-a-github-pages-blog-site/"/>
     <updated>2013-08-08T16:08:00-05:00</updated>
     <id>http://JuliaLovel.github.io/blog/2013/08/08/using-octopress-to-make-a-github-pages-blog-site</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p><strong>A Free, Easy Blog Solution</strong></p>
+
+<p>For my first post, I thought I would share how I created this blog site.
+This blog uses Octopress hosted on Github Pages. Github pages is a great way to host static HTML sites for free, and Octopress uses Jekyll and a set of rake commands to allow you to write posts in Markdown and compiles them into HTML automagically.</p>
+
+<p>All I did to create this site was follow the simple steps from the Octopress docs.
+Here&rsquo;s the link: <a href="http://octopress.org/docs/setup/">Octopress: Getting Started</a></p>
+
+<p>And of course make sure to follow their instructions on deploying to Github Pages here:
+<a href="http://octopress.org/docs/deploying/github/">Octopress: Deploying to Github Pages</a></p>
+
+<p>Once your Octopress site is up and running, here are some resources to help you with making pretty blog posts:</p>
+
+<ul>
+<li><a href="http://daringfireball.net/projects/markdown/basics">Daring Fireball&rsquo;s Markdown Basics guide</a></li>
+<li><a href="http://opthemes.com">OctoPress Themes</a></li>
+</ul>
+
+
+<p>Also, if you&rsquo;re interested in making a static site that looks more like a book or manual, hosted for free on Github Pages, you might like to check out AAltSys&rsquo;s guide on creating a site using SphinxDoc, a Python package that allows you to write content in RST and can compile it into a variety of formats, such as HTML and PDF:
+<a href="http://aaltsys.github.io/doc-publish/">AAltSys&rsquo;s doc-publish</a></p>
 ]]></content>
   </entry>
   
