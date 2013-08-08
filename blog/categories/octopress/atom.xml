@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Codez Galore]]></title>
   <link href="http://JuliaLovel.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://JuliaLovel.github.io/"/>
-  <updated>2013-08-08T17:46:48-05:00</updated>
+  <updated>2013-08-08T18:23:10-05:00</updated>
   <id>http://JuliaLovel.github.io/</id>
   <author>
     <name><![CDATA[Julia Lovel]]></name>
@@ -25,6 +25,9 @@ This blog uses Octopress hosted on Github Pages. Github pages is a great way to 
 
 <p>All I did to create this site was follow the simple steps from the Octopress docs.
 Here&rsquo;s the link: <a href="http://octopress.org/docs/setup/">Octopress: Getting Started</a></p>
+
+<!-- more -->
+
 
 <p>And of course make sure to follow their instructions on deploying to Github Pages here:
 <a href="http://octopress.org/docs/deploying/github/">Octopress: Deploying to Github Pages</a></p>

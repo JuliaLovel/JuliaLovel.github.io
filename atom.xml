@@ -4,7 +4,7 @@
   <title><![CDATA[Codez Galore]]></title>
   <link href="http://JuliaLovel.github.io/atom.xml" rel="self"/>
   <link href="http://JuliaLovel.github.io/"/>
-  <updated>2013-08-08T17:46:48-05:00</updated>
+  <updated>2013-08-08T18:23:10-05:00</updated>
   <id>http://JuliaLovel.github.io/</id>
   <author>
     <name><![CDATA[Julia Lovel]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SOLVED: Git Error - 'fatal: Out of memory]]></title>
+    <link href="http://JuliaLovel.github.io/blog/2013/08/08/solved-git-error-fatal-out-of-memory/"/>
+    <updated>2013-08-08T17:56:00-05:00</updated>
+    <id>http://JuliaLovel.github.io/blog/2013/08/08/solved-git-error-fatal-out-of-memory</id>
+    <content type="html"><![CDATA[<p><strong>The Problem: You don&rsquo;t have enough RAM</strong></p>
+
+<p>My regular dev machine, a MacBook Pro, crashed this week, and I found myself trying to get some work done on my old dev desktop while waiting on my genius bar appointment. I went to clone a project that I recently started working on, when I ran into this error:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone
+</span><span class='line'>fatal: Out of memory, malloc failed</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This error happens when you have an existing repository that has been used on a machine with more RAM than the machine you&rsquo;re currently on. Git pack objects have been created in the repository that are larger than your available memory, so you can&rsquo;t clone or do other operations on the repo.</p>
+
+<p><strong>Step 1: Get to a copy of your Repo</strong>
+To fix this error, you need to have a working copy of the repo on some machine that you have access to. Luckily for me, although my repo is hosted on github, I had a copy of it on my MacBook&rsquo;s backup drive.</p>
+
+<p>So, First: Copy the repo to your machine, or just log on the machine where you have another copy hosted, if you&rsquo;re able. Now:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd my-repo/</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Step 2: Find out how much RAM you have</strong></p>
+
+<p>In my case, I didn&rsquo;t remember how much RAM was in my old machine. An easy command to check your memory in linux is:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo lshw -short -C memory</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Step 3: Repack your git objects</strong></p>
+
+<p>Tell git to use however much available memory you have for the max-pack-size:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git repack --max-pack-size=2M -a -d</span></code></pre></td></tr></table></div></figure>
+
+
+<p>(Just replace &ldquo;2M&rdquo; with however much RAM you have)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using Octopress to make a GitHub Pages blog site]]></title>
@@ -25,6 +71,9 @@ This blog uses Octopress hosted on Github Pages. Github pages is a great way to 
 
 <p>All I did to create this site was follow the simple steps from the Octopress docs.
 Here&rsquo;s the link: <a href="http://octopress.org/docs/setup/">Octopress: Getting Started</a></p>
+
+<!-- more -->
+
 
 <p>And of course make sure to follow their instructions on deploying to Github Pages here:
 <a href="http://octopress.org/docs/deploying/github/">Octopress: Deploying to Github Pages</a></p>
