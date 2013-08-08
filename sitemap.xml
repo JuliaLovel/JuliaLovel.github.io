@@ -1,15 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://JuliaLovel.github.io/julialovel/blog/archives/</loc>
-        <lastmod>2013-08-08T13:13:44-05:00</lastmod>
+        <loc>
+            http://JuliaLovel.github.io/blog/2013/08/08/using-octopress-to-make-a-github-pages-blog-site/
+        </loc>
+        <lastmod>2013-08-08T16:17:21-05:00</lastmod>
     </url>
     <url>
-        <loc>http://JuliaLovel.github.io/julialovel/</loc>
-        <lastmod>2013-08-08T13:13:44-05:00</lastmod>
+        <loc>http://JuliaLovel.github.io/blog/archives/</loc>
+        <lastmod>2013-08-08T16:17:21-05:00</lastmod>
     </url>
     <url>
-        <loc>http://JuliaLovel.github.io/julialovel/robots.txt</loc>
+        <loc>http://JuliaLovel.github.io/</loc>
+        <lastmod>2013-08-08T16:17:21-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://JuliaLovel.github.io/robots.txt</loc>
         <lastmod>2013-08-08T13:13:44-05:00</lastmod>
     </url>
 </urlset>

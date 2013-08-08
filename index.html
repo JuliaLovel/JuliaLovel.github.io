@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>Codez Galore</title>
+  <meta name="author" content="Julia Lovel">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,14 +19,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://JuliaLovel.github.io/julialovel">
-  <link href="/julialovel/favicon.png" rel="icon">
-  <link href="/julialovel/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/julialovel/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
-  <script src="/julialovel/javascripts/modernizr-2.0.js"></script>
+  <link rel="canonical" href="http://JuliaLovel.github.io">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/julialovel/atom.xml" rel="alternate" title="Codez Galore" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/julialovel/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -36,9 +37,9 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/julialovel/">My Octopress Blog</a></h1>
+  <h1><a href="/">Codez Galore</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>Programming notes, tips, and tutorials</h2>
   
 </hgroup>
 
@@ -50,14 +51,14 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:JuliaLovel.github.io/julialovel" />
+    <input type="hidden" name="q" value="site:JuliaLovel.github.io" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
   
 <ul class="main-navigation">
-  <li><a href="/julialovel/">Blog</a></li>
-  <li><a href="/julialovel/blog/archives">Archives</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
 </nav>
@@ -66,9 +67,45 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/08/using-octopress-to-make-a-github-pages-blog-site/">Using Octopress to Make a GitHub Pages Blog Site</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-08T16:08:00-05:00" pubdate data-updated="true">Aug 8<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
-    <a href="/julialovel/blog/archives">Blog Archives</a>
+    <a href="/blog/archives">Blog Archives</a>
     
   </div>
 </div>
@@ -78,7 +115,40 @@
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
+      <li class="post">
+        <a href="/blog/2013/08/08/using-octopress-to-make-a-github-pages-blog-site/">Using Octopress to Make a GitHub Pages Blog Site</a>
+      </li>
+    
   </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/JuliaLovel">@JuliaLovel</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'JuliaLovel',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
@@ -91,7 +161,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Your Name -
+  Copyright &copy; 2013 - Julia Lovel -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

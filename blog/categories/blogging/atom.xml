@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Codez Galore]]></title>
-  <link href="http://JuliaLovel.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: blogging | Codez Galore]]></title>
+  <link href="http://JuliaLovel.github.io/blog/categories/blogging/atom.xml" rel="self"/>
   <link href="http://JuliaLovel.github.io/"/>
   <updated>2013-08-08T16:30:00-05:00</updated>
   <id>http://JuliaLovel.github.io/</id>
