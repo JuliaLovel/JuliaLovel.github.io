@@ -69,7 +69,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/08/08/solved-git-error-fatal-out-of-memory/">SOLVED: Git Error - &#8216;Fatal: Out of Memory</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/08/08/solved-git-error-fatal-out-of-memory/">SOLVED: Git Error - &#8216;Fatal: Out of Memory&#8217;</a></h1>
     
     
       <p class="meta">
@@ -104,8 +104,9 @@
 
 <p>This error happens when you have an existing repository that has been used on a machine with more RAM than the machine you&rsquo;re currently on. Git pack objects have been created in the repository that are larger than your available memory, so you can&rsquo;t clone or do other operations on the repo.</p>
 
-<p><strong>Step 1: Get to a copy of your Repo</strong>
-To fix this error, you need to have a working copy of the repo on some machine that you have access to. Luckily for me, although my repo is hosted on github, I had a copy of it on my MacBook&rsquo;s backup drive.</p>
+<p><strong>Step 1: Get to a copy of your Repo</strong></p>
+
+<p>To fix this error, you need to have a working copy of the repo on some machine that you have access to. Luckily for me, although my repo is hosted on github, I had a copy of it on my MacBook&rsquo;s backup drive.</p>
 
 <p>So, First: Copy the repo to your machine, or just log on the machine where you have another copy hosted, if you&rsquo;re able. Now:</p>
 
@@ -129,7 +130,7 @@ To fix this error, you need to have a working copy of the repo on some machine t
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git repack --max-pack-size=2M -a -d</span></code></pre></td></tr></table></div></figure>
 
 
-<p>(Just replace &ldquo;2M&rdquo; with however much RAM you have)</p>
+<p>(Just replace &ldquo;2M&rdquo; with however much RAM you have.) The &ldquo;-d&rdquo; is important because it will delete the old pack objects that are too large in the process of repacking. That&rsquo;s it!</p>
 </div>
   
   
@@ -207,7 +208,7 @@ Here&rsquo;s the link: <a href="http://octopress.org/docs/setup/">Octopress: Get
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/08/08/solved-git-error-fatal-out-of-memory/">SOLVED: Git Error - &#8216;Fatal: Out of Memory</a>
+        <a href="/blog/2013/08/08/solved-git-error-fatal-out-of-memory/">SOLVED: Git Error - &#8216;Fatal: Out of Memory&#8217;</a>
       </li>
     
       <li class="post">
