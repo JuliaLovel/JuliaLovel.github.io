@@ -9,7 +9,8 @@
   <meta name="author" content="Julia Lovel">
 
   
-  <meta name="description" content="The Problem: You don&rsquo;t have enough RAM My regular dev machine, a MacBook Pro, crashed this week, and I found myself trying to get some work &hellip;">
+  <meta name="description" content="Capistrano Tip
+Sometimes when deploying a project with Capistrano that I just know should work, or has already been working consistently, I will run &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +70,60 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2013/08/12/solved-capistrano-slash-ssh-permission-denied-publickey/">SOLVED: Capistrano / SSH &#8216;Permission Denied (Publickey)&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-12T11:54:00-05:00" pubdate data-updated="true">Aug 12<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>Capistrano Tip</strong>
+Sometimes when deploying a project with Capistrano that I just know should work, or has already been working consistently, I will run into this error message all of a sudden:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ** [site.com :: out] Permission denied (publickey).
+</span><span class='line'> ** fatal: The remote end hung up unexpectedly </span></code></pre></td></tr></table></div></figure>
+
+
+<p>&hellip;Followed by rollback and failed message from cap. Here is what always works for me: Just run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ssh-add</span></code></pre></td></tr></table></div></figure>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/08/12/solved-capistrano-slash-ssh-permission-denied-publickey/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2013/08/08/solved-git-error-fatal-out-of-memory/">SOLVED: Git Error - &#8216;Fatal: Out of Memory&#8217;</a></h1>
     
     
@@ -104,35 +159,12 @@
 
 <p>This error happens when you have an existing repository that has been used on a machine with more RAM than the machine you&rsquo;re currently on. Git pack objects have been created in the repository that are larger than your available memory, so you can&rsquo;t clone or do other operations on the repo.</p>
 
-<p><strong>Step 1: Get to a copy of your Repo</strong></p>
-
-<p>To fix this error, you need to have a working copy of the repo on some machine that you have access to. Luckily for me, although my repo is hosted on github, I had a copy of it on my MacBook&rsquo;s backup drive.</p>
-
-<p>So, First: Copy the repo to your machine, or just log on the machine where you have another copy hosted, if you&rsquo;re able. Now:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd my-repo/</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Step 2: Find out how much RAM you have</strong></p>
-
-<p>In my case, I didn&rsquo;t remember how much RAM was in my old machine. An easy command to check your memory in linux is:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo lshw -short -C memory</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Step 3: Repack your git objects</strong></p>
-
-<p>Tell git to use however much available memory you have for the max-pack-size:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git repack --max-pack-size=2M -a -d</span></code></pre></td></tr></table></div></figure>
-
-
-<p>(Just replace &ldquo;2M&rdquo; with however much RAM you have.) The &ldquo;-d&rdquo; is important because it will delete the old pack objects that are too large in the process of repacking. That&rsquo;s it!</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/08/08/solved-git-error-fatal-out-of-memory/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -206,6 +238,10 @@ Here&rsquo;s the link: <a href="http://octopress.org/docs/setup/">Octopress: Get
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/08/12/solved-capistrano-slash-ssh-permission-denied-publickey/">SOLVED: Capistrano / SSH &#8216;Permission Denied (Publickey)&#8217;</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/08/08/solved-git-error-fatal-out-of-memory/">SOLVED: Git Error - &#8216;Fatal: Out of Memory&#8217;</a>

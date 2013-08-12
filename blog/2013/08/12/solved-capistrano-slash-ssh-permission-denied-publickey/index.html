@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: octopress - Codez Galore</title>
+  <title>SOLVED: Capistrano / SSH 'permission denied (publickey)' - Codez Galore</title>
   <meta name="author" content="Julia Lovel">
 
   
-  <meta name="description" content="Category: octopress">
+  <meta name="description" content="Capistrano Tip
+Sometimes when deploying a project with Capistrano that I just know should work, or has already been working consistently, I will run &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://JuliaLovel.github.ioblog/categories/octopress">
+  <link rel="canonical" href="http://JuliaLovel.github.io/blog/2013/08/12/solved-capistrano-slash-ssh-permission-denied-publickey">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/julialovel/atom.xml" rel="alternate" title="Codez Galore" type="application/atom+xml">
@@ -62,35 +63,108 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Octopress</h1>
+    
+      <h1 class="entry-title">SOLVED: Capistrano / SSH 'Permission Denied (Publickey)'</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-12T11:54:00-05:00" pubdate data-updated="true">Aug 12<span>th</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p><strong>Capistrano Tip</strong>
+Sometimes when deploying a project with Capistrano that I just know should work, or has already been working consistently, I will run into this error message all of a sudden:</p>
 
-  
-  <h2>2013</h2>
-
-<article>
-  
-<h1><a href="/blog/2013/08/08/using-octopress-to-make-a-github-pages-blog-site/">Using Octopress to make a GitHub Pages blog site</a></h1>
-<time datetime="2013-08-08T16:08:00-05:00" pubdate><span class='month'>Aug</span> <span class='day'>08</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blogging/'>blogging</a>, <a class='category' href='/blog/categories/gh-pages/'>gh-pages</a>, <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/github-pages/'>github pages</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a></span>
-</footer>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ** [site.com :: out] Permission denied (publickey).
+</span><span class='line'> ** fatal: The remote end hung up unexpectedly </span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>&hellip;Followed by rollback and failed message from cap. Here is what always works for me: Just run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ssh-add</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<p>This command adds your keys to the ssh-agent. <a href="http://linux.die.net/man/1/ssh-add">Here&rsquo;s the man page.</a></p>
+
+<p>Also, here are the Capistrano recipe SSH config lines that work for me:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>default_run_options[:pty] = true
+</span><span class='line'>ssh_options[:forward_agent] = true
+</span><span class='line'>ssh_options[:keys] = %w(~/.ssh/id_rsa)
+</span><span class='line'>ssh_options[:username] = 'local_user'</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Julia Lovel</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-12T11:54:00-05:00" pubdate data-updated="true">Aug 12<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://JuliaLovel.github.io/blog/2013/08/12/solved-capistrano-slash-ssh-permission-denied-publickey/" data-via="" data-counturl="http://JuliaLovel.github.io/blog/2013/08/12/solved-capistrano-slash-ssh-permission-denied-publickey/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/08/08/solved-git-error-fatal-out-of-memory/" title="Previous Post: SOLVED: Git Error - 'fatal: Out of memory'">&laquo; SOLVED: Git Error - 'fatal: Out of memory'</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
