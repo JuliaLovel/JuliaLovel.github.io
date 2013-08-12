@@ -4,7 +4,7 @@
   <title><![CDATA[Codez Galore]]></title>
   <link href="http://JuliaLovel.github.io/atom.xml" rel="self"/>
   <link href="http://JuliaLovel.github.io/"/>
-  <updated>2013-08-12T12:07:52-05:00</updated>
+  <updated>2013-08-12T12:18:19-05:00</updated>
   <id>http://JuliaLovel.github.io/</id>
   <author>
     <name><![CDATA[Julia Lovel]]></name>
@@ -18,7 +18,7 @@
     <link href="http://JuliaLovel.github.io/blog/2013/08/12/solved-capistrano-slash-ssh-permission-denied-publickey/"/>
     <updated>2013-08-12T11:54:00-05:00</updated>
     <id>http://JuliaLovel.github.io/blog/2013/08/12/solved-capistrano-slash-ssh-permission-denied-publickey</id>
-    <content type="html"><![CDATA[<p><strong>Capistrano Tip</strong>
+    <content type="html"><![CDATA[<p><strong>Capistrano Tip:</strong>
 Sometimes when deploying a project with Capistrano that I just know should work, or has already been working consistently, I will run into this error message all of a sudden:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
