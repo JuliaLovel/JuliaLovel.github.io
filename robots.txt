@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://JuliaLovel.github.io/sitemap.xml 
